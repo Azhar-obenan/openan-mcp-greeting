@@ -46,6 +46,33 @@ if (useHttp) {
             console.error('Client disconnected');
         });
     });
+    
+    // Add explicit SSE endpoint for Windsurf
+    app.get('/', (req, res) => {
+        res.setHeader('Content-Type', 'text/event-stream');
+        res.setHeader('Cache-Control', 'no-cache');
+        res.setHeader('Connection', 'keep-alive');
+        res.setHeader('Access-Control-Allow-Origin', '*');
+        
+        console.error('SSE client connected');
+        
+        // Connect the MCP server to this SSE connection
+        const sseTransport = {
+            send: (data) => {
+                res.write(`data: ${data}\n\n`);
+            },
+            onMessage: () => {
+                // SSE is one-way communication
+            },
+            close: () => {}
+        };
+        
+        server.connect(sseTransport);
+        
+        req.on('close', () => {
+            console.error('SSE client disconnected');
+        });
+    });
 
     // Start server
     const PORT = process.env.PORT || 3000;
