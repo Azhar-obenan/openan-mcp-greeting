@@ -1,10 +1,6 @@
-# Lesson 1: Creating Your First MCP Server
+# Creating Your First MCP Server
 
-This lesson demonstrates how to create a basic Model Context Protocol (MCP) server that provides a simple greeting functionality. You'll learn how to structure, build, and use your MCP server in various IDEs like Cursor, Windsurf, and VS Code.
-
-## Video
-
-[Creating Your First MCP Server](https://www.youtube.com/watch?v=rcjdfhhb6ZU) (from [GitHub Tutorial Series](https://github.com/modelcontextprotocol/tutorial))
+This mcp server demonstrates how to create a basic Model Context Protocol (MCP) server that provides a simple greeting functionality. You'll learn how to structure, build, and use your MCP server in various IDEs like Cursor, Windsurf, and VS Code.
 
 ## Project Structure
 
