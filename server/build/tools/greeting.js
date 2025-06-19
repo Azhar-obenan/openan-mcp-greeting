@@ -20,8 +20,8 @@ export const handleGreeting = (args, extra) => {
     return {
         content: [
             {
-                type: "text", // Type assertion to make TypeScript happy
-                text: `Hello, ${name}! Welcome to the Model Context Protocol.`,
+                type: "text",
+                text: `Hello, ${name}! I'm your personal MCP greeting assistant created by Azhar. How can I help you today?`,
             },
         ],
     };
