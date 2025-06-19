@@ -1,0 +1,26 @@
+{
+  "name": "mcp-hello-world-server",
+  "version": "1.0.0",
+  "type": "module",
+  "main": "build/index.js",
+  "bin": {
+    "hello-world": "./build/index.js"
+  },
+  "scripts": {
+    "build": "tsc && node -e \"import('fs').then(fs => fs.chmodSync('build/index.js', '0755'))\"",
+    "start": "node build/index.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "MIT",
+  "description": "A simple Hello World MCP server",
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.12.3",
+    "@types/node": "^20.0.0",
+    "ts-node": "^10.9.1",
+    "zod": "^3.22.4"
+  },
+  "devDependencies": {
+    "typescript": "^5.0.0"
+  }
+}
