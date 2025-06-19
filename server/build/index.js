@@ -49,8 +49,8 @@ if (useHttp) {
 
     // Start server
     const PORT = process.env.PORT || 3000;
-    httpServer.listen(PORT, () => {
-        console.error(`MCP Server listening on port ${PORT}`);
+    httpServer.listen(PORT, '0.0.0.0', () => {
+        console.error(`MCP Server listening on port ${PORT} on all interfaces`);
     });
 } else {
     // Connect to stdio transport (original behavior)
